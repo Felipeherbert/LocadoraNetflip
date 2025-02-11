@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(https://img.freepik.com/premium-photo/popcorn-before-watching-movie-generative-ai_73290-2845.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; 
+        }
+
+        .login {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            margin: 20px 0; 
+        }
+
+        .login h1 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .login input[type="text"],
+        .login input[type="password"],
+        .login input[type="email"],
+        .login select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .checkbox-group {
+            margin-top: 15px;
+            text-align: left;
+        }
+
+        .checkbox-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .buttons button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn-cancel,
+        .btn-clear,
+        .btn-submit,
+        .btn-back {
+            background-color: #1d0778;
+            color: #fff;
+        }
+
+        .btn-back {
+            margin-top: 0.8px;
+            padding: 10px;
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-back:hover {
+            background-color: #0056b3;
+        }
+
+        .links {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <h1>Cadastro de Usuário</h1>
+        <form action="processarCadastro.php" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade" required>
+
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado" required>
+                <option value="">Selecione...</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+
+            <label>Sexo:</label>
+            <input type="radio" id="masculino" name="sexo" value="Masculino" required>
+            <label for="masculino">Masculino</label>
+            <input type="radio" id="feminino" name="sexo" value="Feminino" required>
+            <label for="feminino">Feminino</label>
+
+            <div class="checkbox-group">
+                <label>Escolha os filmes que você mais gosta:</label>
+                <label><input type="checkbox" name="filmes" value="Ação"> Ação</label>
+                <label><input type="checkbox" name="filmes" value="Animação"> Animação</label>
+                <label><input type="checkbox" name="filmes" value="Aventura"> Aventura</label>
+                <label><input type="checkbox" name="filmes" value="Comédia"> Comédia</label>
+                <label><input type="checkbox" name="filmes" value="Suspense"> Suspense</label>
+                <label><input type="checkbox" name="filmes" value="Drama"> Drama</label>
+                <label><input type="checkbox" name="filmes" value="Romance"> Romance</label>
+                <label><input type="checkbox" name="filmes" value="Terror"> Terror</label>
+            </div>
+
+            <div class="buttons">
+                <button type="reset" class="btn-clear">Limpar</button>
+                <a href="paginaPrincipal.html" class="btn-back">Cadastrar</a>
+                <button type="reset" class="btn-cancel">Cancelar</button>
+            </div>
+        </form>
+        <div class="links">
+            <a href="index.html" class="btn-back">Voltar</a>
+           
+        </div>
+    </div>
+</body>
+</html>
