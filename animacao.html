@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(45deg, #000000, #003cff);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-image: linear-gradient(45deg, #000000, #003cff);
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #2701ff;
+        }
+        .container {
+            display: flex;
+            flex: 1;
+        }
+        nav {
+            width: 170px;
+            padding: 10px;
+            background-image: linear-gradient(45deg, #ffffff, #003cff);
+            border-right: 1px solid #003cff;
+            display: flex;
+            flex-direction: column;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            flex-grow: 1;
+        }
+        nav ul li {
+            margin-bottom: 8px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #000000;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        main {
+            flex: 1;
+            padding: 15px;
+            background-color: #00aeff;
+            background-image: linear-gradient(45deg, #ffffff, #003cff);
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .categories {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .categories a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .categories a:hover {
+            text-decoration: underline;
+        }
+        .movies {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .movie {
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .movie img {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        footer {
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            background-image: linear-gradient(45deg, #ff0000, #003cff);
+            border-top: 1px solid #003cff;
+        }
+        .buttons {
+            margin-top: 10px;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff; 
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .buttons button:hover {
+            background-color: #0056b3; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/imagemlocadora.png" alt="Minha Foto" width="650" height="300">
+    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Principal</a></li>
+                <li><a href="filmes.html">Filmes</a></li>
+                <li><a href="#">Trailers</a></li>
+                <li><a href="#">Trilha Sonora</a></li>
+                <li><a href="#">Contatos</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="categories">
+                <a href="animacao.html">Animação</a>
+                <a href="aventura.html">Aventura</a>
+                <a href="comedia.html">Comédia</a>
+            </div>
+            <div class="movies">
+                <div class="movie">
+                    <a href="aliceinWoderland.html">
+                        <img src="https://i.pinimg.com/originals/6b/c3/c3/6bc3c37bc923b77f9578dbd3b35409fa.jpg" alt="Alice in Wonderland">
+                        <p>Alice in Wonderland</p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="kunfuPanda.html">
+                        <img src="https://th.bing.com/th/id/OIP.BegFroawMzvbP0gNTwyAKAAAAA?rs=1&pid=ImgDetMain" alt="Kung fu panda">
+                        <p>Kung fu panda</p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="madagascar.html">
+                        <img src="https://th.bing.com/th/id/R.166a91afb3e5ded862ce049c42e1dd52?rik=RQ%2fn%2b3p%2bJZc0xA&riu=http%3a%2f%2fbr.web.img2.acsta.net%2fmedias%2fnmedia%2f18%2f91%2f54%2f02%2f20150796.jpg&ehk=s2OsihF7eDtFA4lMCr%2btjeCRa3swarFzMZl%2foW%2fRIzI%3d&risl=&pid=ImgRaw&r=0" alt="Madagascar">
+                        <p>Madagascar</p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="shrek.html">
+                        <img src="https://pics.filmaffinity.com/shrek-903764423-large.jpg" alt="Shrek">
+                        <p>Shrek</p>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; Felipe Herbert Couto Heleno - Trabalho Acadêmico - 2º Ano - 2025</p>
+        <div class="buttons">
+            <button onclick="window.location.href='index.html'">Voltar para Login</button>
+            <button onclick="window.location.href='cadastroFormulario.html'">Voltar para Cadastro</button>
+        </div>
+    </footer>
+</body>
+</html>
